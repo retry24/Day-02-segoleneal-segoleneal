@@ -10,20 +10,31 @@ void ft_print_comb(void)
 	char x = 48;
 	char y = 48;
 	char z = 48;
-	while(x<58 || y<58 || z<58)
+	while(x<57 && y<57 && z<57)
 	{	
-		if(x!=y!=z || x<y<z)
-		{
-			ft_putchar(x);
-			ft_putchar(y);
-			ft_putchar(z);
-		}
-                ft_putchar(',');
-                ft_putchar(' ');
-		x++;
+		ft_putchar(x);
 		y++;
+		if(y!=x && y>x)
+		{
+			ft_putchar(y);
+		}
+		else {
+			ft_putchar('Y');	
+		}
 		z++;
-	}
+		if(z!=x && z!=y)
+                {
+                        ft_putchar(z);
+                }
+                else {
+                        z++;
+			ft_putchar(z);
+                }
+
+		x++;
+		ft_putchar(',');
+                ft_putchar(' ');
+	}                
 }	
 
 int main()
