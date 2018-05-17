@@ -8,33 +8,33 @@ void	ft_putchar(char n)
 void ft_print_comb(void)
 {
 	char x = 48;
-	char y = 48;
+	char y = 49;
 	char z = 48;
-	while(x<57 && y<57 && z<57)
-	{	
-		ft_putchar(x);
-		y++;
-		if(y!=x && y>x)
-		{
+	while(x<57)
+	{
+		if(x<57)
+		{		
+			ft_putchar(x);
+		}
+
+		if(y<57)
+		{	
+
 			ft_putchar(y);
 		}
-		else {
-			ft_putchar('Y');	
-		}
-		z++;
-		if(z!=x && z!=y)
-                {
-                        ft_putchar(z);
-                }
-                else {
-                        z++;
-			ft_putchar(z);
-                }
 
-		x++;
-		ft_putchar(',');
-                ft_putchar(' ');
-	}                
+		if(z<57)
+		{
+			z++;
+			if(z!=x && z!=y)
+        	        {
+                	        ft_putchar(z);
+               		}
+		}
+			y++;	
+			ft_putchar(',');
+                	ft_putchar(' ');           
+	}
 }	
 
 int main()
